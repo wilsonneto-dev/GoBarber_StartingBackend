@@ -1,0 +1,13 @@
+- criar uma migration pela cli do typeorm
+(após configurar o ormconfig e o package script typeorm)
+yarn typeorm migration:create -n CreateAppointments
+
+- rodar a migration do typeorm:
+yarn typeorm migration:run
+
+- voltar
+yarn typeorm migration:revert
+
+- ver as migrations
+yarn typeorm migration:show
+

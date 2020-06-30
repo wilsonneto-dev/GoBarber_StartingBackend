@@ -1,0 +1,12 @@
+{
+  "type": "postgres",
+  "host": "104.248.225.18",
+  "port": 5432,
+  "username": "postgres",
+  "password": "gostack",
+  "database": "gostack",
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations/"
+  }
+}
