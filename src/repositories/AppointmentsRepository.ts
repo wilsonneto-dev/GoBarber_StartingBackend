@@ -4,8 +4,11 @@ import Appointment from '../models/Appointment';
 
 @EntityRepository(Appointment)
 class TransactionsRepository extends Repository<Appointment> {
-  public findByDate(date: Date): Appointment | null {
-    return null;
+  public async findByDate(date: Date): Promise<Appointment | null> {
+    const appointment = await this.findOne({
+      where: { date },
+    });
+    return appointment ?? null;
   }
 }
 
